@@ -257,7 +257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6AFB\u4E95\u5148\u751F\u306E"
+  m_Text: "\u6AFB\u4E95\u5148\u751F\u306E\u6709\u96E3\u3044\u304A\u8A00\u8449"
 --- !u!222 &589173981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -604,6 +604,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2125062960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10b2caad7860c49308b0c709e0637fac, type: 3}
+  m_Script: {fileID: 11500000, guid: d0de85e79fecae7409818e9d3f733385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: GameScene
