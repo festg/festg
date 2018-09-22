@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     Text choicesText;
 
-
+    BaseMover mover;
     public void SetChoicesText(string text)
     {
         choicesText.text = text;
@@ -17,10 +17,11 @@ public class Enemy : MonoBehaviour {
     // Use this for initialization
     void Start () {
         SetChoicesText("B");
+        mover = new YMover(this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		mover.Move();
 	}
 }
