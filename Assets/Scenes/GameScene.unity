@@ -322,6 +322,11 @@ Prefab:
       propertyPath: timeController
       value: 
       objectReference: {fileID: 443207897}
+    - target: {fileID: 114863716654113078, guid: 4aba79fc3313df04985c706f515306ba,
+        type: 2}
+      propertyPath: views
+      value: 
+      objectReference: {fileID: 108625942}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aba79fc3313df04985c706f515306ba, type: 2}
   m_IsPrefabAsset: 0
@@ -1268,7 +1273,7 @@ MonoBehaviour:
   questionManager: {fileID: 1081141370}
   tenController: {fileID: 181482479}
   timeController: {fileID: 443207897}
-  canvas: {fileID: 0}
+  views: {fileID: 108625942}
 --- !u!4 &1682876254
 Transform:
   m_ObjectHideFlags: 0
