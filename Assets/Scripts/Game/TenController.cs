@@ -6,13 +6,21 @@ public class TenController : MonoBehaviour {
 
     private Bar tenBar;
 
-    public void SetTenBar(Bar timeBar)
+    //加点数
+    private float addScore;
+
+    public void SetTenBar(Bar timeBar,float addScore)
     {
+        this.addScore = addScore;
+        tenBar = timeBar;
+        tenBar.SetMaxVal(100);
+        tenBar.SetVal(0);
 
-        this.tenBar = timeBar;
-        this.tenBar.SetMaxVal(100);
-        this.tenBar.SetVal(0);
+    }
 
+    public void AddScore()
+    {
+        tenBar.SetVal(tenBar.GetVal()+addScore);
     }
 
 	// Use this for initialization
