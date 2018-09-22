@@ -18,7 +18,7 @@ public class TimeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timeBar.SetVal(timeBar.GetVal()-1);
+        timeBar.SetVal(timeBar.GetVal()- Time.deltaTime);
         if (timeBar.GetVal() < 0)
             OnTimeOver();
 	}

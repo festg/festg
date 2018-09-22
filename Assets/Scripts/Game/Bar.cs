@@ -9,22 +9,22 @@ public class Bar : MonoBehaviour {
 
     private float maxWidth;
 
-    private int currentVal;
-    private int maxVal;
+    private float currentVal;
+    private float maxVal;
 
     private void Start()
     {
         maxWidth = rectTransform.rect.width;
     }
 
-    public void SetMaxVal(int mval)
+    public void SetMaxVal(float mval)
     {
         maxVal = mval;
     }
 
-    public int GetVal() { return currentVal; }
+    public float GetVal() { return currentVal; }
 
-    public void SetVal(int val){
+    public void SetVal(float val){
         currentVal = val;
         var size = rectTransform.sizeDelta;
         size.Set(  (currentVal / (float)maxVal) * maxWidth,size.y);
