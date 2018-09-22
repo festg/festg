@@ -10,7 +10,7 @@ public class QuestionManager : MonoBehaviour {
     //総問題数取得
     public int GetQuestionCount()
     {
-       return questions.Count;
+       return questions.Count<4? questions.Count:4;
     }
 
 	// Use this for initialization
@@ -23,7 +23,7 @@ public class QuestionManager : MonoBehaviour {
             questions[i] = questions[r];
             questions[r] = tmp;
         }
-        iterator = questions.GetEnumerator();
+        iterator = questions.GetRange(0,4).GetEnumerator();
 	}
 
     public QuestionsData.Question Next()

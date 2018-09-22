@@ -376,6 +376,11 @@ Prefab:
       propertyPath: enemyBuilder
       value: 
       objectReference: {fileID: 1364363049}
+    - target: {fileID: 114863716654113078, guid: 4aba79fc3313df04985c706f515306ba,
+        type: 2}
+      propertyPath: rankManagement
+      value: 
+      objectReference: {fileID: 231939435}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aba79fc3313df04985c706f515306ba, type: 2}
   m_IsPrefabAsset: 0
@@ -1044,8 +1049,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.3, y: 465.2}
-  m_SizeDelta: {x: 1263.4, y: 50.5}
+  m_AnchoredPosition: {x: 8.3, y: 429.3}
+  m_SizeDelta: {x: 1263.4, y: 122.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473091410
 MonoBehaviour:
@@ -1079,7 +1084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u554F\u984C\uFF1A\u79C1\u306F\u8AB0\u3067\u3057\u3087\u3046\uFF1FA:hoge,B:fuga,C:poge,D:aaa"
+  m_Text: "\u554F\u984C\uFF1A\u79C1\u306F\u8AB0\u3067\u3057\u3087\u3046\uFF1F \nA:hoge,B:fuga,C:poge,D:aaa"
 --- !u!222 &1473091411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1202,6 +1207,7 @@ MonoBehaviour:
   timeController: {fileID: 443207897}
   enemyBuilder: {fileID: 1364363049}
   views: {fileID: 108625942}
+  rankManagement: {fileID: 231939435}
 --- !u!4 &1682876254
 Transform:
   m_ObjectHideFlags: 0
