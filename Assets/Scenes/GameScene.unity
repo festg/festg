@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBar: {fileID: 413954631}
   tenBar: {fileID: 707217090}
+  questionPresenter: {fileID: 1473091412}
 --- !u!1 &181482478
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +328,11 @@ Prefab:
       propertyPath: views
       value: 
       objectReference: {fileID: 108625942}
+    - target: {fileID: 114863716654113078, guid: 4aba79fc3313df04985c706f515306ba,
+        type: 2}
+      propertyPath: enemyBuilder
+      value: 
+      objectReference: {fileID: 1364363049}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aba79fc3313df04985c706f515306ba, type: 2}
   m_IsPrefabAsset: 0
@@ -1008,6 +1014,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8601b4ffc8b95f4faf24bca3336b908, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1364363048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364363050}
+  - component: {fileID: 1364363049}
+  m_Layer: 0
+  m_Name: EnemyBuilder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1364363049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364363048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290d78357a794b74d9d2c6ad8664d612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseEnemy: {fileID: 1394347171}
+--- !u!4 &1364363050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364363048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -150.02837, y: -187.33734, z: -4.2793236}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1394347170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1065,7 @@ GameObject:
   - component: {fileID: 1394347173}
   - component: {fileID: 1394347172}
   - component: {fileID: 1394347171}
+  - component: {fileID: 1394347174}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1097,6 +1145,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1394347174
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1394347170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 42.5
 --- !u!1 &1473091408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1170,7 @@ GameObject:
   - component: {fileID: 1473091409}
   - component: {fileID: 1473091411}
   - component: {fileID: 1473091410}
+  - component: {fileID: 1473091412}
   m_Layer: 5
   m_Name: MondaiText
   m_TagString: Untagged
@@ -1172,6 +1236,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1473091408}
   m_CullTransparentMesh: 0
+--- !u!114 &1473091412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473091408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87063346a59a4154ca8229857cb46a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1473091410}
 --- !u!1 &1559348641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1349,7 @@ MonoBehaviour:
   questionManager: {fileID: 1081141370}
   tenController: {fileID: 181482479}
   timeController: {fileID: 443207897}
+  enemyBuilder: {fileID: 1364363049}
   views: {fileID: 108625942}
 --- !u!4 &1682876254
 Transform:
@@ -1376,6 +1453,7 @@ GameObject:
   - component: {fileID: 1977126220}
   - component: {fileID: 1977126219}
   - component: {fileID: 1977126222}
+  - component: {fileID: 1977126223}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1469,6 +1547,18 @@ CircleCollider2D:
   m_Offset: {x: 0.66612464, y: 10.104188}
   serializedVersion: 2
   m_Radius: 20.281994
+--- !u!114 &1977126223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977126218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642c6f0bb3b552e4196a2f3bb20bee54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 114144736816292606, guid: 3987f68a3337ec34f9db65a8f548214a, type: 2}
 --- !u!1 &1997625291
 GameObject:
   m_ObjectHideFlags: 0

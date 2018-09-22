@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour {
     private Views views;
 
 
-	// Use this for initialization
-	void Start () {
-        var question =questionManager.Next();
+    void NextQuestion()
+    {
+        var question = questionManager.Next();
         if (question == null)
         {
             SceneManager.LoadScene("score1");
@@ -29,13 +29,22 @@ public class GameManager : MonoBehaviour {
         else
         {
             views.QuestionPresenter.SetQuestion(question);
+            enemyBuilder.CreateEnemies("A");
         }
+    }
 
+    // Use this for initialization
+    void Start () {
+        
         timeController.SetTimeBar(views.TimeBar,1000);
         timeController.OnTimeOver+=() => {
             SceneManager.LoadScene("score1");
         };
-        enemyBuilder.CreateEnemies();
+        NextQuestion();
+        enemyBuilder.OnQuestionResult += (clearFlag) =>
+        {
+            NextQuestion();
+        };
 	}
 	
 	// Update is called once per frame

@@ -1,14 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 public class Enemy : MonoBehaviour {
 
     [SerializeField]
     Text choicesText;
 
+    uint hp = 10;
+
     BaseMover mover;
+
+    public event Action OnDead;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerBullet")
+        {
+            hp--;
+            if (hp <= 0)
+            {
+                OnDead();
+                OnDead = null;
+                Destroy(gameObject);
+            }
+        }
+    }
+
     public void SetChoicesText(string text)
     {
         choicesText.text = text;
