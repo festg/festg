@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour {
         if (other.tag == "PlayerBullet")
         {
             hp--;
+            other.gameObject.SetActive(false);
             if (hp <= 0)
             {
                 OnDead();

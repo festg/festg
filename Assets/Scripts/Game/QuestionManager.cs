@@ -16,7 +16,14 @@ public class QuestionManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
        questions= QuestionGetter.Deserialize("Assets/Question/question.json").Questions;
-       iterator= questions.GetEnumerator();
+        for (var i = questions.Count - 1; i > 0; i--)
+        {
+            var r = (int)Mathf.Floor(Random.value * (i + 1));
+            var tmp = questions[i];
+            questions[i] = questions[r];
+            questions[r] = tmp;
+        }
+        iterator = questions.GetEnumerator();
 	}
 
     public QuestionsData.Question Next()
