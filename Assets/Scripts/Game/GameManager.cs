@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour {
         }
         else
         {
-            views.QuestionPresenter.SetQuestion(question);
-            enemyBuilder.CreateEnemies("A");
+            var trueChoiceName=views.QuestionPresenter.SetQuestion(question);
+            enemyBuilder.CreateEnemies(trueChoiceName);
         }
     }
 
