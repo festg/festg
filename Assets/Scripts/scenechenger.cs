@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class scenechenger : MonoBehaviour {
+public class SceneChenger : MonoBehaviour {
 
-public string scenename;
+public string sceneName;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public string scenename;
         if (Input.GetKeyUp(KeyCode.Return))
         {
             Debug.Log("Return key was released");
-            SceneManager.LoadScene(scenename);
+            SceneManager.LoadScene(sceneName);
 
         }
 	}
