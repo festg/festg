@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        SetChoicesText("B");
         mover = new YMover(this);
 	}
 	

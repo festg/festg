@@ -19,7 +19,7 @@ public class QuestionManager : MonoBehaviour {
        iterator= questions.GetEnumerator();
 	}
 
-    QuestionsData.Question Next()
+    public QuestionsData.Question Next()
     {
         if (iterator.MoveNext())
             return iterator.Current;
