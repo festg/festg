@@ -18,14 +18,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private Views views;
 
+    [SerializeField]
+    private RankManagement rankManagement;
+
 
     void NextQuestion()
     {
         var question = questionManager.Next();
         if (question == null)
-        {
-            SceneManager.LoadScene("score1");
-        }
+            EndGame();
         else
         {
             var trueChoiceName=views.QuestionPresenter.SetQuestion(question);
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour {
         tenController.SetTenBar(views.TenBar,100.0f/questionManager.GetQuestionCount());
         timeController.SetTimeBar(views.TimeBar, questionManager.GetQuestionCount() * 15);
         timeController.OnTimeOver+=() => {
-            SceneManager.LoadScene("score1");
+            EndGame();
         };
         NextQuestion();
         enemyBuilder.OnQuestionResult += (clearFlag) =>
@@ -49,9 +50,15 @@ public class GameManager : MonoBehaviour {
             NextQuestion();
         };
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    void EndGame()
+    {
+        SceneManager.LoadScene("score1");
+        rankManagement.SetScore(views.TenBar.GetVal());
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

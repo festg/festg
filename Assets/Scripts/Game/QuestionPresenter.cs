@@ -17,7 +17,7 @@ public class QuestionPresenter : MonoBehaviour {
             question.Choices[i] = question.Choices[r];
             question.Choices[r] = tmp;
         }
-        text.text = question.Text;
+        text.text = question.Text+"\n";
         var choiceNames = new string[] { "A", "B", "C", "D" };
         string trueChoiceName="";
 

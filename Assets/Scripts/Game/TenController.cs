@@ -18,6 +18,7 @@ public class TenController : MonoBehaviour {
 
     }
 
+
     public void AddScore()
     {
         tenBar.SetVal(tenBar.GetVal()+addScore);
