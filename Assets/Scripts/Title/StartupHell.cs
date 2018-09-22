@@ -6,7 +6,7 @@ public class StartupHell : MonoBehaviour {
 
 	void Update(){
         if( Input.GetKeyDown( KeyCode.Return ) )
-            Debug.log( "Enter key was pressed." );
+            Debug.Log( "Enter key was pressed." );
 
     }
 }
