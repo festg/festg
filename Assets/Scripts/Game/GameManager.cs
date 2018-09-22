@@ -35,8 +35,9 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
-        timeController.SetTimeBar(views.TimeBar,1000);
+
+        tenController.SetTenBar(views.TenBar);
+        timeController.SetTimeBar(views.TimeBar, questionManager.GetQuestionCount() * 15);
         timeController.OnTimeOver+=() => {
             SceneManager.LoadScene("score1");
         };
